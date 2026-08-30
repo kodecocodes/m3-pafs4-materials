@@ -90,14 +90,15 @@ struct RowView: View {
   }
 }
 
-struct LeaderboardView_Previews: PreviewProvider {
-  static private var leaderboardIsShowing = Binding.constant(false)
-  static private var game = Binding.constant(Game(loadTestData: true))
+#Preview {
+  @Previewable @State var leaderboardIsShowing = false
+  @Previewable @State var game = Binding.constant(Game(loadTestData: true))
+  LeaderboardView(leaderboardIsShowing: $leaderboardIsShowing, game: game)
+}
 
-  static var previews: some View {
-    LeaderboardView(leaderboardIsShowing: leaderboardIsShowing, game: game)
-      .previewInterfaceOrientation(.landscapeRight)
-    LeaderboardView(leaderboardIsShowing: leaderboardIsShowing, game: game)
-      .preferredColorScheme(.dark)
-  }
+#Preview("Dark Mode", traits: .landscapeRight) {
+  @Previewable @State var leaderboardIsShowing = false
+  @Previewable @State var game = Binding.constant(Game(loadTestData: true))
+  LeaderboardView(leaderboardIsShowing: $leaderboardIsShowing, game: game)
+    .preferredColorScheme(.dark)
 }

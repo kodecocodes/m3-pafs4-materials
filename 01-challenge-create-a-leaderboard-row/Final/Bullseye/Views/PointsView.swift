@@ -29,15 +29,15 @@ struct PointsView: View {
   }
 }
 
-struct PointsView_Previews: PreviewProvider {
-  static private var alertIsVisible = Binding.constant(false)
-  static private var sliderValue = Binding.constant(50.0)
-  static private var game = Binding.constant(Game())
+#Preview {
+  @Previewable @State var alertIsVisible = true
+  @Previewable @State var game = Game()
+  PointsView(alertIsVisible: $alertIsVisible, sliderValue: .constant(50.0), game: $game)
+}
 
-  static var previews: some View {
-    PointsView(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game)
-    PointsView(alertIsVisible: alertIsVisible, sliderValue: sliderValue, game: game)
-      .preferredColorScheme(.dark)
-      .previewInterfaceOrientation(.landscapeRight)
-  }
+#Preview("Dark Mode", traits: .landscapeRight) {
+  @Previewable @State var alertIsVisible = true
+  @Previewable @State var game = Game()
+  PointsView(alertIsVisible: $alertIsVisible, sliderValue: .constant(50.0), game: $game)
+    .preferredColorScheme(.dark)
 }
