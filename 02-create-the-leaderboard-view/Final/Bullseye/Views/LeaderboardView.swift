@@ -73,6 +73,9 @@ struct RowView: View {
 #Preview {
   LeaderboardView()
     .previewInterfaceOrientation(.landscapeRight)
+}
+
+#Preview("Dark Mode") {
   LeaderboardView()
     .preferredColorScheme(.dark)
 }

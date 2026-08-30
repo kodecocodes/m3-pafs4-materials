@@ -101,15 +101,12 @@ struct DateText: View {
 }
 
 #Preview {
-  VStack {
-    InstructionText(text: "Instructions")
-    BigNumberText(text: "999")
-    SliderLabelText(text: "99")
-    LabelText(text: "Score")
-    BodyText(text: "You scored 200 Points\n 😻😻😻")
-    ButtonText(text: "Start New Round")
-    ScoreText(score: 459)
-    DateText(date: Date())
-  }
-  .padding()
+  InstructionText(text: "Instructions")
+  BigNumberText(text: "999")
+  SliderLabelText(text: "99")
+  LabelText(text: "Score")
+  BodyText(text: "You scored 200 Points\n 😻😻😻")
+  ButtonText(text: "Start New Round")
+  ScoreText(score: 459)
+  DateText(date: Date())
 }
