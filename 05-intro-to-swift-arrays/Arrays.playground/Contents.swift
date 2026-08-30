@@ -1,6 +1,6 @@
 import Cocoa
 
-var myInts = [1,2,3]
+var myInts = [1, 2, 3]
 
 for int in myInts {
   print(int)

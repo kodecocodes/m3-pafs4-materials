@@ -92,7 +92,6 @@ struct LeaderboardView_Previews: PreviewProvider {
   }
 }
 
-
 #Preview(traits: .landscapeRight) {
   @Previewable @State var leaderboardIsShowing = false
   LeaderboardView(leaderboardIsShowing: $leaderboardIsShowing)
@@ -102,5 +101,3 @@ struct LeaderboardView_Previews: PreviewProvider {
   @Previewable @State var leaderboardIsShowing = false
   LeaderboardView(leaderboardIsShowing: $leaderboardIsShowing).preferredColorScheme(.dark)
 }
-
-

@@ -7,7 +7,9 @@ struct RoundedImageViewStroked: View {
     Image(systemName: systemName)
       .font(.title)
       .foregroundColor(Color("TextColor"))
-      .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
+      .frame(
+        width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength
+      )
       .overlay(
         Circle()
           .strokeBorder(Color("ButtonStrokeColor"), lineWidth: Constants.General.strokeWidth)
@@ -22,7 +24,9 @@ struct RoundedImageViewFilled: View {
     Image(systemName: systemName)
       .font(.title)
       .foregroundColor(Color("ButtonFilledTextColor"))
-      .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
+      .frame(
+        width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength
+      )
       .background(
         Circle()
           .fill(Color("ButtonFilledBackgroundColor"))
@@ -38,7 +42,9 @@ struct RoundRectTextView: View {
       .kerning(-0.2)
       .bold()
       .font(.title3)
-      .frame(width: Constants.General.roundRectViewWidth, height: Constants.General.roundRectViewHeight)
+      .frame(
+        width: Constants.General.roundRectViewWidth, height: Constants.General.roundRectViewHeight
+      )
       .foregroundColor(Color("TextColor"))
       .overlay(
         RoundedRectangle(cornerRadius: Constants.General.roundRectCornerRadius)
@@ -56,7 +62,9 @@ struct RoundedTextView: View {
       .bold()
       .font(.title3)
       .foregroundColor(Color("TextColor"))
-      .frame(width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength)
+      .frame(
+        width: Constants.General.roundedViewLength, height: Constants.General.roundedViewLength
+      )
       .overlay(
         Circle()
           .strokeBorder(Color("LeaderboardRowColor"), lineWidth: Constants.General.strokeWidth)
@@ -76,7 +84,7 @@ struct PreviewView: View {
 }
 
 #Preview {
-    PreviewView()
-    PreviewView()
-      .preferredColorScheme(.dark)
+  PreviewView()
+  PreviewView()
+    .preferredColorScheme(.dark)
 }

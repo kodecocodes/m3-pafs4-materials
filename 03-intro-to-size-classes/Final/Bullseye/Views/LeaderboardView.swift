@@ -80,8 +80,8 @@ struct RowView: View {
 }
 
 #Preview {
-    LeaderboardView()
-      .previewInterfaceOrientation(.landscapeRight)
-    LeaderboardView()
-      .preferredColorScheme(.dark)
+  LeaderboardView()
+    .previewInterfaceOrientation(.landscapeRight)
+  LeaderboardView()
+    .preferredColorScheme(.dark)
 }

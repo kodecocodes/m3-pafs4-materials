@@ -1,4 +1,5 @@
 import XCTest
+
 @testable import Bullseye
 
 final class BullseyeTests: XCTestCase {

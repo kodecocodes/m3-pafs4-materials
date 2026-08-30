@@ -87,8 +87,8 @@ struct HitMeButton: View {
 }
 
 #Preview {
-    ContentView()
-    ContentView()
-      .previewInterfaceOrientation(.landscapeRight)
-      .preferredColorScheme(.dark)
+  ContentView()
+  ContentView()
+    .previewInterfaceOrientation(.landscapeRight)
+    .preferredColorScheme(.dark)
 }
