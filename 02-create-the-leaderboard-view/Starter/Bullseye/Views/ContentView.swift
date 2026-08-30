@@ -90,8 +90,7 @@ struct HitMeButton: View {
   ContentView()
 }
 
-#Preview("Dark Mode") {
+#Preview("Dark Mode", traits: .landscapeRight) {
   ContentView()
-    .previewInterfaceOrientation(.landscapeRight)
     .preferredColorScheme(.dark)
 }

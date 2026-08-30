@@ -70,9 +70,8 @@ struct RowView: View {
   }
 }
 
-#Preview {
+#Preview(traits: .landscapeRight) {
   LeaderboardView()
-    .previewInterfaceOrientation(.landscapeRight)
 }
 
 #Preview("Dark Mode") {
