@@ -81,26 +81,12 @@ struct RowView: View {
     .frame(maxWidth: Constants.Leaderboard.maxRowWidth)
   }
 }
-
-#Preview {
-  @Previewable @State var leaderboardIsShowing = false
-  @Previewable @State var game = Binding.constant(Game(loadTestData: true))
-  LeaderboardView(leaderboardIsShowing: $leaderboardIsShowing, game: game)
-}
-
-#Preview("Dark Mode", traits: .landscapeRight) {
-  @Previewable @State var leaderboardIsShowing = false
-  @Previewable @State var game = Binding.constant(Game(loadTestData: true))
-  LeaderboardView(leaderboardIsShowing: $leaderboardIsShowing, game: game)
-    .preferredColorScheme(.dark)
-}
-
 #Preview(traits: .landscapeRight) {
   @Previewable @State var leaderboardIsShowing = false
   LeaderboardView(leaderboardIsShowing: $leaderboardIsShowing)
 }
 
-#Preview {
+#Preview("Dark Mode") {
   @Previewable @State var leaderboardIsShowing = false
   LeaderboardView(leaderboardIsShowing: $leaderboardIsShowing).preferredColorScheme(.dark)
 }

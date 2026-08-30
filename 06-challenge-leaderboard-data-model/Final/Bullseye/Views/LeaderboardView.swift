@@ -84,13 +84,11 @@ struct RowView: View {
 
 #Preview {
   @Previewable @State var leaderboardIsShowing = false
-  @Previewable @State var game = Binding.constant(Game(loadTestData: true))
-  LeaderboardView(leaderboardIsShowing: $leaderboardIsShowing, game: game)
+  LeaderboardView(leaderboardIsShowing: $leaderboardIsShowing)
 }
 
 #Preview("Dark Mode", traits: .landscapeRight) {
   @Previewable @State var leaderboardIsShowing = false
-  @Previewable @State var game = Binding.constant(Game(loadTestData: true))
-  LeaderboardView(leaderboardIsShowing: $leaderboardIsShowing, game: game)
+  LeaderboardView(leaderboardIsShowing: $leaderboardIsShowing)
     .preferredColorScheme(.dark)
 }
