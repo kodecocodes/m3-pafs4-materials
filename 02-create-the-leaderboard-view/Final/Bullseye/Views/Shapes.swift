@@ -4,7 +4,6 @@ struct Shapes: View {
   @State private var wideShapes = true
 
   var body: some View {
-    VStack {
       if !wideShapes {
         Circle()
           .strokeBorder(Color.blue, lineWidth: 20)
@@ -27,7 +26,6 @@ struct Shapes: View {
           wideShapes.toggle()
         }
       }
-    }
   }
 }
 
